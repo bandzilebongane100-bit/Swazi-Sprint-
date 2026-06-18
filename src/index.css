@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Custom Animations & Transitions under Tailwind CSS v4 style */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseSlight {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-slight {
+  animation: pulseSlight 2s infinite ease-in-out;
+}
+
+/* Custom Scrollbar representation to ensure smooth mobile appearance */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.25);
+  border-radius: 9px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 191, 36, 0.45);
+}
+
+/* Rounded rect fallback definitions for browser environments that lack ctx.roundRect */
+canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

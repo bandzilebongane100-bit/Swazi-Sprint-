@@ -1,0 +1,6 @@
+{
+  "name": "Swazi Sprint",
+  "description": "An action-packed 3D-perspective mobile endless runner set in the Kingdom of Eswatini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
